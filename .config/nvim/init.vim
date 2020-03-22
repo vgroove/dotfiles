@@ -1,5 +1,11 @@
 """"""""""""""Kevin's VIMRC""""""""""""""
 
+""""""""""""""PLUGIN MANAGER""""""""""""""
+if empty(glob("~/.config/nvim/autoload/plug.vim"))
+  silent! execute '!curl --create-dirs -fsSLo ~/.config/nvim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * silent! PlugInstall
+endif
+
 """"""""""""""PLUGINS""""""""""""""
 
 " Plug - plugin manager

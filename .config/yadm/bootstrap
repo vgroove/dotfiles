@@ -1,5 +1,13 @@
 #!/bin/sh
 
+distro=$(awk -F= '/^ID=/{print $2}' /etc/os-release)
+
+if [ "$distro" = "ubuntu"]; then
+    sudo apt install neovim tmux zsh
+elif [ "$distro" = "fedora"]; then
+    sudo yum install neovim tmux zsh
+fi
+
 if command -v nvim >/dev/null 2>&1; then
   echo "Bootstrapping Vim"
   vim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
