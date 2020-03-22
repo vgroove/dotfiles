@@ -87,3 +87,4 @@ source $ZSH/oh-my-zsh.sh
 # Disable shared history
 unsetopt share_history
 setopt no_share_history
+alias vim="nvim"

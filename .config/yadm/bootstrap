@@ -2,9 +2,9 @@
 
 distro=$(awk -F= '/^ID=/{print $2}' /etc/os-release)
 
-if [ "$distro" = "ubuntu"]; then
+if [ "$distro" = "ubuntu" ]; then
     sudo apt install neovim tmux zsh
-elif [ "$distro" = "fedora"]; then
+elif [ "$distro" = "fedora" ]; then
     sudo yum install neovim tmux zsh
 fi
 
@@ -15,3 +15,5 @@ fi
 
 echo "Bootstrapping Oh-My-Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+mv ~/.oh-my-zsh ~/.config/oh-my-zsh
+mv .zshrc.pre-oh-my-zsh .zshrc
