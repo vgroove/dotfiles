@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if command -v nvim >/dev/null 2>&1; then
+  echo "Bootstrapping Vim"
+  vim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
+fi
+
+echo "Bootstrapping Oh-My-Zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
