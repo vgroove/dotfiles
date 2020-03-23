@@ -1,5 +1,8 @@
 """"""""""""""Kevin's VIMRC""""""""""""""
 
+" Make sure this isn't running in vscode nvim extenstion
+if !exists('g:vscode')
+
 """"""""""""""PLUGIN MANAGER""""""""""""""
 if empty(glob("~/.config/nvim/autoload/plug.vim"))
   silent! execute '!curl --create-dirs -fsSLo ~/.config/nvim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
@@ -55,6 +58,9 @@ call plug#end()
 let $NVIM_TUI_ENABLE_TRUE_COLOR=0
 " set termguicolors
 let g:airline_theme = 'deus'
+
+" end check for vscode
+endif
 
 """"""""""""""SPACING""""""""""""""
 syntax enable	" enable syntax processing
