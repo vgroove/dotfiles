@@ -1,8 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+if [ "$TMUX" = "" ]; then tmux; fi
+
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/kevin/.config/oh-my-zsh
+  export ZSH=~/.config/oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
